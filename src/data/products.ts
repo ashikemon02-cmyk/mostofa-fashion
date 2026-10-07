@@ -1,0 +1,392 @@
+import { Product } from '../types';
+
+export const INITIAL_PRODUCTS: Product[] = [
+  {
+    id: 'mf-p-101',
+    name: 'Executive Cotton Silk Embroidered Panjabi',
+    nameBn: 'এক্সিকিউটিভ কটন সিল্ক এমব্রয়ডারি পাঞ্জাবি',
+    category: 'mens',
+    subcategory: 'Panjabi',
+    subcategoryBn: 'পাঞ্জাবি',
+    price: 1650,
+    originalPrice: 2200,
+    wholesalePrice: 950,
+    wholesaleMinQty: 10,
+    image: '/images/products/panjabi.jpg?v=5',
+    gallery: [
+      '/images/products/panjabi.jpg?v=5',
+      '/images/products/panjabi_detail.jpg?v=5'
+    ],
+    description: 'Premium soft cotton silk blend festive Panjabi with subtle collar and placket hand embroidery. Breathable, long-lasting color, perfect for formal occasions, Eid, and Jummah.',
+    descriptionBn: 'প্রিমিয়াম সফট কটন সিল্ক ব্লেন্ড পাঞ্জাবি। কলার ও প্লেকেটে নিখুঁত হাতের কাজ, শতভাগ আরামদায়ক ও রুচিশীল। ঈদ ও যে কোনো অনুষ্ঠানের জন্য মানানসই।',
+    sizes: ['38 (S)', '40 (M)', '42 (L)', '44 (XL)', '46 (XXL)'],
+    colors: [
+      { name: 'Royal White', hex: '#f8fafc' },
+      { name: 'Navy Blue', hex: '#1e3a8a' },
+      { name: 'Olive Green', hex: '#3f6212' },
+      { name: 'Jet Black', hex: '#111827' }
+    ],
+    fabric: 'Premium Mercerized Cotton-Silk',
+    fabricBn: 'মার্সারাইজড কটন-সিল্ক',
+    inStock: true,
+    stockCount: 120,
+    isFeatured: true,
+    isBestseller: true,
+    rating: 4.9,
+    reviewsCount: 38
+  },
+  {
+    id: 'mf-p-102',
+    name: 'Premium Oxford Formal Long Sleeve Shirt',
+    nameBn: 'প্রিমিয়াম অক্সফোর্ড ফরমাল ফুল হাতা শার্ট',
+    category: 'mens',
+    subcategory: 'Formal Shirts',
+    subcategoryBn: 'ফরমাল শার্ট',
+    price: 1150,
+    originalPrice: 1550,
+    wholesalePrice: 650,
+    wholesaleMinQty: 12,
+    image: '/images/products/formal_shirt.jpg?v=5',
+    gallery: [
+      '/images/products/formal_shirt.jpg?v=5',
+      '/images/products/formal_shirt_detail.jpg?v=5'
+    ],
+    description: '100% fine combed cotton formal shirt with reinforced stitch and wrinkle-resistant finish. Tailored fit for executive office look.',
+    descriptionBn: '১০০% ফাইন কম্বড কটন প্রিমিয়াম ফরমাল শার্ট। অফিস ও করপোরেট ব্যবহারের উপযোগী মসৃণ ও টেকসই ফেব্রিক। রিঙ্কল-রেজিস্ট্যান্ট।',
+    sizes: ['15 (M)', '15.5 (L)', '16 (XL)', '16.5 (XXL)'],
+    colors: [
+      { name: 'Sky Blue', hex: '#38bdf8' },
+      { name: 'Crisp White', hex: '#ffffff' },
+      { name: 'Light Charcoal', hex: '#475569' }
+    ],
+    fabric: '100% Egyptian Giza Combed Cotton',
+    fabricBn: '১০০% মিশরীয় গিজা কটন',
+    inStock: true,
+    stockCount: 85,
+    isFeatured: true,
+    isBestseller: false,
+    rating: 4.8,
+    reviewsCount: 24
+  },
+  {
+    id: 'mf-p-103',
+    name: 'Export Quality Stretch Denim Jeans (Slim-Straight)',
+    nameBn: 'এক্সপোর্ট কোয়ালিটি স্ট্রেচ ডেনিম জিন্স প্যান্ট',
+    category: 'mens',
+    subcategory: 'Denim',
+    subcategoryBn: 'জিন্স প্যান্ট',
+    price: 1350,
+    originalPrice: 1850,
+    wholesalePrice: 780,
+    wholesaleMinQty: 12,
+    image: '/images/products/denim_jeans.jpg?v=5',
+    gallery: [
+      '/images/products/denim_jeans.jpg?v=5',
+      '/images/products/denim_jeans_detail.jpg?v=5'
+    ],
+    description: '12.5 oz heavy stretch cotton denim with authentic laser wash. YKK zip fly, heavy brass rivets, extremely durable for daily wear.',
+    descriptionBn: '১২.৫ আউন্স হেভি ডেনিম এক্সপোর্ট কোয়ালিটি জিন্স। কম্ফোর্ট স্ট্রেচ ফেব্রিকেশন এবং ওয়াশ টেকনোলজি। দীর্ঘস্থায়ী ও স্টাইলিশ।',
+    sizes: ['30', '32', '34', '36', '38'],
+    colors: [
+      { name: 'Vintage Dark Indigo', hex: '#1e293b' },
+      { name: 'Ocean Blue Wash', hex: '#2563eb' },
+      { name: 'Jet Carbon Black', hex: '#0f172a' }
+    ],
+    fabric: '98% Cotton, 2% Spandex Stretch Denim',
+    fabricBn: '৯৮% কটন, ২% স্প্যানডেক্স স্ট্রেচ ডেনিম',
+    inStock: true,
+    stockCount: 150,
+    isFeatured: true,
+    isBestseller: true,
+    rating: 4.9,
+    reviewsCount: 52
+  },
+  {
+    id: 'mf-p-104',
+    name: 'Designer Georgette Embroidered Salwar Kameez (3-Piece)',
+    nameBn: 'ডিজাইনার জর্জেট এমব্রয়ডারি থ্রি-পিস',
+    category: 'womens',
+    subcategory: 'Three-Piece',
+    subcategoryBn: 'থ্রি-পিস',
+    price: 2450,
+    originalPrice: 3200,
+    wholesalePrice: 1450,
+    wholesaleMinQty: 6,
+    image: '/images/products/three_piece.jpg?v=5',
+    gallery: [
+      '/images/products/three_piece.jpg?v=5',
+      '/images/products/three_piece_detail.jpg?v=5'
+    ],
+    description: 'Luxurious heavy embroidered georgette kameez with digital printed silk dupatta and santoon inner & salwar. Exquisite craftsmanship for party and festivals.',
+    descriptionBn: 'আকর্ষণীয় হেভি এমব্রয়ডারি সমৃদ্ধ ফক্স জর্জেট কামিজ, সাথে ডিজিটাল প্রিন্ট সিল্ক ওড়না ও সান্তুন ইনার-সেলোয়ার। বিয়ের অনুষ্ঠান ও পার্টির জন্য পারফেক্ট।',
+    sizes: ['Semi-Stitched', 'Ready 38 (M)', 'Ready 40 (L)', 'Ready 42 (XL)'],
+    colors: [
+      { name: 'Ruby Crimson', hex: '#be123c' },
+      { name: 'Emerald Green', hex: '#047857' },
+      { name: 'Powder Peach', hex: '#fb923c' }
+    ],
+    fabric: 'Heavy Fox Georgette with Pure Santoon',
+    fabricBn: 'হেভি ফক্স জর্জেট ও পিওর সান্তুন',
+    inStock: true,
+    stockCount: 65,
+    isFeatured: true,
+    isBestseller: true,
+    rating: 5.0,
+    reviewsCount: 41
+  },
+  {
+    id: 'mf-p-105',
+    name: 'Pure Cotton Hand-Block Print Ready-Made Kurti Set',
+    nameBn: 'পিওর কটন হ্যান্ড-ব্লক প্রিন্ট রেডিমেড কুর্তি সেট',
+    category: 'womens',
+    subcategory: 'Kurti & Tops',
+    subcategoryBn: 'কুর্তি ও টপস',
+    price: 1250,
+    originalPrice: 1650,
+    wholesalePrice: 690,
+    wholesaleMinQty: 10,
+    image: '/images/products/kurti.jpg?v=5',
+    gallery: [
+      '/images/products/kurti.jpg?v=5'
+    ],
+    description: '100% breathable organic cotton Kurti with matching cigarette pants. Color guaranteed, light summer-friendly fabric for work and casual outings.',
+    descriptionBn: '১০০% পিওর কটন হ্যান্ড-ব্লক কুর্তি সেট। রঙের পাকা গ্যারান্টি, প্রতিদিনের ব্যবহারের জন্য অত্যন্ত আরামদায়ক ও মার্জিত লুক।',
+    sizes: ['36 (S)', '38 (M)', '40 (L)', '42 (XL)'],
+    colors: [
+      { name: 'Mustard Floral', hex: '#ca8a04' },
+      { name: 'Indigo Flora', hex: '#1d4ed8' },
+      { name: 'Rose Mauve', hex: '#9d174d' }
+    ],
+    fabric: '100% Organic Handloom Cotton',
+    fabricBn: '১০০% অর্গানিক তাঁত কটন',
+    inStock: true,
+    stockCount: 95,
+    isFeatured: false,
+    isBestseller: true,
+    rating: 4.8,
+    reviewsCount: 19
+  },
+  {
+    id: 'mf-p-106',
+    name: 'Executive Slim-Fit Casual Blazer Coat',
+    nameBn: 'এক্সিকিউটিভ স্লিম-ফিট ক্যাজুয়াল ব্লেজার',
+    category: 'mens',
+    subcategory: 'Blazer & Suits',
+    subcategoryBn: 'ব্লেজার ও স্যুট',
+    price: 3450,
+    originalPrice: 4800,
+    wholesalePrice: 2150,
+    wholesaleMinQty: 5,
+    image: '/images/products/blazer.jpg?v=5',
+    gallery: [
+      '/images/products/blazer.jpg?v=5',
+      '/images/products/blazer_detail.jpg?v=5'
+    ],
+    description: 'Modern single-breasted blazer with structured shoulder pads, horn buttons and satin interior lining. Perfect for weddings, business conferences, and dinner events.',
+    descriptionBn: 'স্মার্ট স্লিম-ফিট ফরমাল ও ক্যাজুয়াল ব্লেজার। নিখুঁত কাটিং, প্রিমিয়াম সাটিন ইনার লাইনিং। অনুষ্ঠান ও বিজনেসের জন্য মানানসই।',
+    sizes: ['36 (S)', '38 (M)', '40 (L)', '42 (XL)', '44 (XXL)'],
+    colors: [
+      { name: 'Midnight Charcoal', hex: '#18181b' },
+      { name: 'Rich Navy', hex: '#1e3a8a' },
+      { name: 'Ash Grey', hex: '#64748b' }
+    ],
+    fabric: 'Wool Blend suiting with Silk Lining',
+    fabricBn: 'উল ব্লেন্ড স্যুট ফ্যাব্রিক ও সিল্ক লাইনিং',
+    inStock: true,
+    stockCount: 40,
+    isFeatured: true,
+    isBestseller: false,
+    rating: 4.9,
+    reviewsCount: 17
+  },
+  {
+    id: 'mf-p-107',
+    name: 'Wholesale Master Bundle: 24 Pcs Export Denim Jeans Lot',
+    nameBn: 'পাইকারি মাস্টার বান্ডেল: ২৪ পিস এক্সপোর্ট ডেনিম জিন্স লট',
+    category: 'wholesale',
+    subcategory: 'Wholesale Bundle',
+    subcategoryBn: 'হোলসেল বান্ডেল',
+    price: 18000,
+    originalPrice: 28800,
+    wholesalePrice: 17500,
+    wholesaleMinQty: 1,
+    image: '/images/products/wholesale_jeans.jpg?v=5',
+    gallery: [
+      '/images/products/wholesale_jeans.jpg?v=5',
+      '/images/products/denim_jeans.jpg?v=5'
+    ],
+    description: 'Wholesale master box containing 24 assorted sizes (30, 32, 34, 36) across 3 best-selling washes. High profit margin for retail shopkeepers & online boutique sellers.',
+    descriptionBn: '২৪ পিসের পাইকারি মাস্টার কার্টন (সাইজ ৩০, ৩২, ৩৪, ৩৬ মিশ্রিত)। ৩টি ট্রেন্ডি ওয়াশ কালার। দোকানদার ও অনলাইন বিক্রেতাদের জন্য সর্বোচ্চ লাভের সুযোগ। সরাসরি মিল রেট।',
+    sizes: ['Carton Assorted (30-36)'],
+    colors: [
+      { name: 'Assorted 3-Wash Bundle', hex: '#1e293b' }
+    ],
+    fabric: '100% Export Grade Denim',
+    fabricBn: '১০০% এক্সপোর্ট গ্রেড ডেনিম',
+    inStock: true,
+    stockCount: 25,
+    isFeatured: true,
+    isBestseller: true,
+    rating: 5.0,
+    reviewsCount: 29
+  },
+  {
+    id: 'mf-p-108',
+    name: 'Wholesale Lot: 12 Pcs Premium Formal Shirts Pack',
+    nameBn: 'পাইকারি লট: ১২ পিস প্রিমিয়াম ফরমাল শার্ট প্যাক',
+    category: 'wholesale',
+    subcategory: 'Wholesale Bundle',
+    subcategoryBn: 'হোলসেল বান্ডেল',
+    price: 7800,
+    originalPrice: 12000,
+    wholesalePrice: 7500,
+    wholesaleMinQty: 1,
+    image: '/images/products/wholesale_shirts.jpg?v=5',
+    gallery: [
+      '/images/products/wholesale_shirts.jpg?v=5',
+      '/images/products/formal_shirt.jpg?v=5'
+    ],
+    description: 'Assorted dozen (12 pcs) cotton executive shirts with individual poly packaging and barcode hangtags. Ready for direct shelf placement in your clothing store.',
+    descriptionBn: '১২ পিসের সম্পূর্ণ সেট পাইকারি শার্ট প্যাক। পৃথক পলি প্যাক এবং হ্যাংট্যাগ যুক্ত। শোরুম ও কাপড়ের দোকানে সরাসরি বিক্রয়ের জন্য প্রস্তুত।',
+    sizes: ['Mixed Ratio (M-4, L-5, XL-3)'],
+    colors: [
+      { name: 'Assorted Corporate Shades', hex: '#3b82f6' }
+    ],
+    fabric: 'Giza Cotton Blend',
+    fabricBn: 'গিজা কটন ব্লেন্ড',
+    inStock: true,
+    stockCount: 30,
+    isFeatured: true,
+    isBestseller: true,
+    rating: 4.9,
+    reviewsCount: 15
+  },
+  {
+    id: 'mf-p-109',
+    name: 'Heavy Cotton Drop-Shoulder Oversized T-Shirt',
+    nameBn: 'হেভি কটন ড্রপ-শোল্ডার ওভারসাইজড টি-শার্ট',
+    category: 'readymade',
+    subcategory: 'T-Shirts',
+    subcategoryBn: 'টি-শার্ট',
+    price: 550,
+    originalPrice: 790,
+    wholesalePrice: 280,
+    wholesaleMinQty: 20,
+    image: '/images/products/tshirt.jpg?v=5',
+    gallery: [
+      '/images/products/tshirt.jpg?v=5'
+    ],
+    description: '220 GSM heavyweight combed cotton drop-shoulder streetwear t-shirt. Bio-washed, silicone softened, pre-shrunk with ribbed neck collar.',
+    descriptionBn: '২২০ জিএসএম প্রিমিয়াম হেভি ড্রপ-শোল্ডার টি-শার্ট। বায়ো-ওয়াশড কটন, নিখুঁত স্টিচিং ও আরামদায়ক ফেব্রিক। রঙ ও সাইজের শতভাগ নিশ্চয়তা।',
+    sizes: ['M (Chest 40)', 'L (Chest 42)', 'XL (Chest 44)'],
+    colors: [
+      { name: 'Pitch Black', hex: '#09090b' },
+      { name: 'Oatmeal Beige', hex: '#e2d9cc' },
+      { name: 'Sage Green', hex: '#4a5d4e' }
+    ],
+    fabric: '220 GSM 100% Combed Compact Cotton',
+    fabricBn: '২২০ জিএসএম ১০০% কম্বড কমপ্যাক্ট কটন',
+    inStock: true,
+    stockCount: 200,
+    isFeatured: false,
+    isBestseller: true,
+    rating: 4.8,
+    reviewsCount: 33
+  },
+  {
+    id: 'mf-p-110',
+    name: 'Chanderi Silk Ready-Made Festive 3-Piece Suite',
+    nameBn: 'চান্দেরি সিল্ক রেডিমেড ফেস্টিভ থ্রি-পিস',
+    category: 'womens',
+    subcategory: 'Three-Piece',
+    subcategoryBn: 'থ্রি-পিস',
+    price: 2150,
+    originalPrice: 2900,
+    wholesalePrice: 1250,
+    wholesaleMinQty: 8,
+    image: '/images/products/festive_dress.jpg?v=5',
+    gallery: [
+      '/images/products/festive_dress.jpg?v=5',
+      '/images/products/three_piece.jpg?v=5'
+    ],
+    description: 'Chanderi silk festive ready-made dress with zari thread detailing, cotton lawn trousers and pure organza digital printed dupatta.',
+    descriptionBn: 'চান্দেরি সিল্ক পার্টি রেডিমেড থ্রি-পিস স্যুট। জারি সুতোর আকর্ষণীয় কাজ ও ডিজিটাল অর্গানজা ওড়না।',
+    sizes: ['38 (M)', '40 (L)', '42 (XL)'],
+    colors: [
+      { name: 'Rose Pink', hex: '#f43f5e' },
+      { name: 'Teal Turquoise', hex: '#0d9488' }
+    ],
+    fabric: 'Chanderi Silk & Pure Organza',
+    fabricBn: 'চান্দেরি সিল্ক ও অর্গানজা',
+    inStock: true,
+    stockCount: 45,
+    isFeatured: false,
+    isBestseller: false,
+    rating: 4.7,
+    reviewsCount: 11
+  },
+  {
+    id: 'mf-p-111',
+    name: 'Wholesale Bundle: 20 Pcs Semifitted Luxury Panjabi Lot',
+    nameBn: 'পাইকারি বান্ডেল: ২০ পিস সেমিফিটেড লাক্সারি পাঞ্জাবি লট',
+    category: 'wholesale',
+    subcategory: 'Wholesale Bundle',
+    subcategoryBn: 'হোলসেল বান্ডেল',
+    price: 19000,
+    originalPrice: 32000,
+    wholesalePrice: 18500,
+    wholesaleMinQty: 1,
+    image: '/images/products/wholesale_panjabi.jpg?v=5',
+    gallery: [
+      '/images/products/wholesale_panjabi.jpg?v=5',
+      '/images/products/panjabi.jpg?v=5'
+    ],
+    description: 'Wholesale lot of 20 premium embroidered panjabis in high demand festival colors. Great for clothing stores preparing for Eid and wedding seasons.',
+    descriptionBn: '২০ পিসের আকর্ষণীয় লাক্সারি এমব্রয়ডারি পাঞ্জাবি পাইকারি লট। সাইজ ৪০-৪৬ এবং ৪টি সেরা কালার সমাহার। ঈদ ও উৎসবের বাজারে দারুণ লাভজনক।',
+    sizes: ['Assorted (40, 42, 44, 46)'],
+    colors: [
+      { name: 'Multi Colors Assorted', hex: '#4f46e5' }
+    ],
+    fabric: 'Mercerized Cotton Silk',
+    fabricBn: 'মার্সারাইজড কটন সিল্ক',
+    inStock: true,
+    stockCount: 18,
+    isFeatured: true,
+    isBestseller: true,
+    rating: 5.0,
+    reviewsCount: 22
+  },
+  {
+    id: 'mf-p-112',
+    name: 'Mens Classic Solid Pique Polo Shirt',
+    nameBn: 'পুরুষদের ক্লাসিক সলিড পিকে পোলো শার্ট',
+    category: 'readymade',
+    subcategory: 'Polo Shirts',
+    subcategoryBn: 'পোলো শার্ট',
+    price: 690,
+    originalPrice: 950,
+    wholesalePrice: 360,
+    wholesaleMinQty: 15,
+    image: '/images/products/polo_shirt.jpg?v=5',
+    gallery: [
+      '/images/products/polo_shirt.jpg?v=5',
+      '/images/products/polo_shirt_detail.jpg?v=5'
+    ],
+    description: '100% combed cotton pique knit polo shirt with durable tipped rib collar and mother-of-pearl buttons. Color retention test passed.',
+    descriptionBn: '১০০% কম্বড কটন পিকে নিট পোলো শার্ট। কলার ও হাতার কাপ নিখুঁত, কালার ওয়াশ গ্যারান্টি। অফিস ও ক্যাজুয়াল পরিধানের জন্য চমৎকার।',
+    sizes: ['M (Chest 39)', 'L (Chest 41)', 'XL (Chest 43)', 'XXL (Chest 45)'],
+    colors: [
+      { name: 'Crimson Red', hex: '#e11d48' },
+      { name: 'Deep Black', hex: '#18181b' },
+      { name: 'Steel Melange', hex: '#64748b' }
+    ],
+    fabric: '230 GSM Pique Knit Cotton',
+    fabricBn: '২৩০ জিএসএম পিকে নিট কটন',
+    inStock: true,
+    stockCount: 110,
+    isFeatured: false,
+    isBestseller: true,
+    rating: 4.8,
+    reviewsCount: 27
+  }
+];
